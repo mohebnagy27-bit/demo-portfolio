@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #faf9f6;
+  --color-offwhite: #f5f4f1;
+  --color-graylight: #eceae6;
+  --color-graymid: #c9c6c0;
+  --color-charcoal: #1b1b1a;
+  --color-charcoal-2: #4a4845;
+  --color-accent: #a9824c;
+  --color-accent-dark: #8c6a3a;
+
+  --font-display: "Playfair Display", serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --spacing-section: 7rem;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+  }
+
+  body {
+    @apply bg-white text-charcoal font-sans antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display text-charcoal;
+  }
+
+  ::selection {
+    @apply bg-accent text-white;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply mx-auto max-w-7xl px-6 lg:px-12;
+  }
+
+  .heading-display {
+    @apply font-display text-4xl font-medium leading-tight tracking-tight text-charcoal sm:text-5xl lg:text-6xl;
+  }
+
+  .heading-section {
+    @apply font-display text-3xl font-medium leading-tight tracking-tight text-charcoal sm:text-4xl;
+  }
+
+  .text-subheading {
+    @apply text-sm font-medium uppercase tracking-[0.2em] text-accent;
+  }
+
+  .text-body {
+    @apply text-base leading-relaxed text-charcoal-2 sm:text-lg;
+  }
+
+  .text-small {
+    @apply text-sm text-charcoal-2;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-full bg-charcoal px-8 py-3.5 text-sm font-medium text-white shadow-md transition-all duration-200 hover:bg-charcoal-2 hover:shadow-lg focus:outline-hidden focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:bg-charcoal disabled:hover:shadow-md;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-full border border-graymid bg-transparent px-8 py-3.5 text-sm font-medium text-charcoal transition-all duration-200 hover:border-charcoal hover:bg-offwhite focus:outline-hidden focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:border-graymid disabled:hover:bg-transparent;
+  }
+}
