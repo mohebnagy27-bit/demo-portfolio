@@ -1,8 +1,17 @@
-const ProductCard = ({ title, category, coverImage, shortDescription }) => {
+const ProductCard = ({ title, category, coverImage, shortDescription, onSelect }) => {
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      onSelect();
+    }
+  };
+
   return (
     <div
       role="button"
       tabIndex={0}
+      onClick={onSelect}
+      onKeyDown={handleKeyDown}
       className="group cursor-pointer overflow-hidden rounded-2xl border border-graylight bg-white transition-all duration-200 hover:border-graymid hover:shadow-md"
     >
       <div className="aspect-4/3 overflow-hidden bg-offwhite">

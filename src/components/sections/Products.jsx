@@ -1,7 +1,11 @@
+import { useState } from "react";
 import products from "../../data/products";
 import ProductCard from "../ui/ProductCard";
+import ProductModal from "../ProductModal/ProductModal";
 
 const Products = () => {
+  const [selectedProduct, setSelectedProduct] = useState(null);
+
   return (
     <section id="products" className="py-section bg-offwhite">
       <div className="container-custom">
@@ -23,6 +27,7 @@ const Products = () => {
                 category={product.category}
                 coverImage={product.coverImage}
                 shortDescription={product.shortDescription}
+                onSelect={() => setSelectedProduct(product)}
               />
             ))}
           </div>
@@ -30,8 +35,10 @@ const Products = () => {
           <p className="text-small mt-16">More products coming soon.</p>
         )}
       </div>
+
+      <ProductModal product={selectedProduct} onClose={() => setSelectedProduct(null)} />
     </section>
   );
 };
 
-export default Products;
+export default Products; 
