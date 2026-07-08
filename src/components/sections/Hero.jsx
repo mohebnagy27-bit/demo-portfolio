@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import Button from "../ui/Button";
 import { heroContainerVariants, heroItemVariants } from "../../lib/motionVariants";
+import profileImage from "../../assets/1783545922033.jpg";
 
 const Hero = () => {
   return (
@@ -31,11 +32,19 @@ const Hero = () => {
             variants={heroItemVariants}
             className="mt-10 flex w-full flex-col gap-4 sm:flex-row"
           >
-            <Button variant="primary" aria-label="View Products" className="w-full sm:w-auto">
-              View Products
+            <Button  variant="primary" aria-label="View Products" className="w-full sm:w-auto">
+              <a
+                href="#products"
+              >
+                View Products
+              </a>
             </Button>
             <Button variant="secondary" aria-label="Contact Me" className="w-full sm:w-auto">
+               <a
+                href="#contact"
+              >
               Contact Me
+              </a>
             </Button>
           </motion.div>
         </div>
@@ -47,7 +56,8 @@ const Hero = () => {
             aria-label="Placeholder portrait of the product creator"
             className="relative flex aspect-square w-full max-w-md items-center justify-center rounded-3xl bg-offwhite shadow-xl"
           >
-            <span className="text-small text-graymid">Profile Image Placeholder</span>
+            {/* <span className="text-small text-graymid">Profile Image Placeholder</span> */}
+            <img src={profileImage} alt="Profile Image" className="h-full w-full object-cover rounded-3xl" />
           </div>
         </motion.div>
       </motion.div>

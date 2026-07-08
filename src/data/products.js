@@ -1,88 +1,92 @@
-/**
- * Product data structure.
- * Each product object should follow this shape:
- *
- * {
- *   id: string | number,
- *   title: string,
- *   category: string,
- *   coverImage: string,
- *   shortDescription: string,
- *   gallery: { image: string, caption: string }[], // ordered gallery images with captions
- *   video: string | null,                           // optional; when present, appears as the final gallery slide
- * }
- */
 
-// {
-//   id: 1,
+import coverproduct1 from "../assets/product1/1783545922015.jpg"
+import image1product1 from "../assets/product1/1783545921991.jpg"
+import image2product1 from "../assets/product1/1783545921939.jpg"
 
-//   title: "",
+import coverproduct2 from "../assets/product2/1783545921798.jpg"
+import image1product2 from "../assets/product2/1783545921823.jpg"
 
-//   category: "",
-
-//   shortDescription: "",
-
-//   coverImage: "",
-
-//   gallery: [
-//     {
-//       id: 1,
-//       image: "",
-//       caption: ""
-//     },
-//     {
-//       id: 2,
-//       image: "",
-//       caption: ""
-//     }
-//   ],
-
-//   video: {
-//     src: "",
-//     poster: ""
-//   }
-// }
-
-import cover from "../assets/IMG_20250705_194118.jpg"
-import image1 from "../assets/IMG_20250705_194104.jpg"
-import image2 from "../assets/IMG_20250705_194203.jpg"
-import image3 from "../assets/IMG_20250705_194254.jpg"
-import image4 from "../assets/IMG_20250705_194416.jpg"
+import coverproduct3 from "../assets/product3/1783545921921.jpg"
+import image1product3 from "../assets/product3/1783545921884.jpg"
 
 const products = [
     {
   id: 1,
 
-  title: "test product",
+  title: "product",
 
-  category: "test category",
+  category: "category",
 
   shortDescription: "",
 
-  coverImage: cover,
+  coverImage: coverproduct1,
 
   gallery: [
     {
       id: 1,
-      image: image1,
+      image: coverproduct1,
       caption: "caption image 1"
     },
     {
       id: 2,
-      image: image2,
+      image: image1product1,
       caption: "caption image 2"
     },
     {
       id: 3,
-      image: image3,
+      image: image2product1,
       caption: "caption image 3"
     },
+  ],
+video: null
+},
     {
-      id: 4,
-      image: image4,
-      caption: "caption image 4"
-    }
+  id: 2,
 
+  title: "product",
+
+  category: "category",
+
+  shortDescription: "",
+
+  coverImage: coverproduct2,
+
+  gallery: [
+    {
+      id: 1,
+      image: coverproduct2,
+      caption: "caption image 1"
+    },
+    {
+      id: 2,
+      image: image1product2,
+      caption: "caption image 2"
+    }
+  ],
+video: null
+},
+    {
+  id: 3,
+
+  title: "product",
+
+  category: "category",
+
+  shortDescription: "",
+
+  coverImage: coverproduct1,
+
+  gallery: [
+    {
+      id: 1,
+      image: coverproduct3,
+      caption: "caption image 1"
+    },
+    {
+      id: 2,
+      image: image1product3,
+      caption: "caption image 2"
+    }
   ],
 video: null
 }

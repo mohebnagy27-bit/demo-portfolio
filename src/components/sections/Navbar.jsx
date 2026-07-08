@@ -67,10 +67,12 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <div className="hidden lg:block">
-          <Button variant="primary" aria-label="Let's Talk" className="px-6 py-2.5">
+        <div className="font-display text-xl font-medium tracking-tight text-charcoal">
+          {/* <Button variant="primary" aria-label="Let's Talk" className="px-6 py-2.5">
             Let's Talk
-          </Button>
+          </Button> */}
+          Atelier
+
         </div>
 
         <button
