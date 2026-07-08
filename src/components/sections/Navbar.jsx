@@ -71,7 +71,7 @@ const Navbar = () => {
           {/* <Button variant="primary" aria-label="Let's Talk" className="px-6 py-2.5">
             Let's Talk
           </Button> */}
-          Atelier
+          Beyond Borders
 
         </div>
 
@@ -123,7 +123,7 @@ const Navbar = () => {
               </a>
             </li>
           ))}
-          <li className="px-4 pt-2">
+          {/* <li className="px-4 pt-2">
             <Button
               variant="primary"
               aria-label="Let's Talk"
@@ -132,7 +132,7 @@ const Navbar = () => {
             >
               Let's Talk
             </Button>
-          </li>
+          </li> */}
         </ul>
       </div>
     </header>
