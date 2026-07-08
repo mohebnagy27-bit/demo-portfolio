@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 import Button from "../ui/Button";
 import FormField from "../ui/FormField";
+import { fadeUpVariants, sectionViewport } from "../../lib/motionVariants";
 
 const CONTACT_INFO = [
   { label: "Email", value: "hello@studio.com" },
@@ -25,6 +27,15 @@ const Contact = () => {
   };
 
   return (
+
+    <motion.section
+      id="contact"
+      className="py-section"
+      initial="hidden"
+      whileInView="visible"
+      viewport={sectionViewport}
+      variants={fadeUpVariants}
+    >
     <section id="contact" className="py-section">
       <div className="container-custom">
         <span className="text-subheading">Contact</span>
@@ -80,6 +91,7 @@ const Contact = () => {
         </div>
       </div>
     </section>
+    </motion.section>
   );
 };
 

@@ -1,13 +1,5 @@
-// const Footer = () => {
-//   return (
-//     <footer>
-//       <h2>Footer</h2>
-//       <p>Placeholder footer content.</p>
-//     </footer>
-//   );
-// };
-
-// export default Footer;
+import { motion } from "framer-motion";
+import { fadeUpVariants, sectionViewport } from "../../lib/motionVariants";
 
 const NAV_LINKS = [
   { id: "hero", label: "Home" },
@@ -18,7 +10,13 @@ const NAV_LINKS = [
 
 const Footer = () => {
   return (
-    <footer className="border-t border-graylight bg-offwhite">
+    <motion.footer
+      className="border-t border-graylight bg-offwhite"
+      initial="hidden"
+      whileInView="visible"
+      viewport={sectionViewport}
+      variants={fadeUpVariants}
+    >
       <div className="container-custom flex flex-col items-center gap-8 py-12 text-center lg:flex-row lg:justify-between lg:text-left">
         <div>
           <p className="font-display text-lg font-medium text-charcoal">Atelier</p>
@@ -40,7 +38,7 @@ const Footer = () => {
 
         <p className="text-small">© 2026 Atelier. All rights reserved.</p>
       </div>
-    </footer>
+    </motion.footer>
   );
 };
 

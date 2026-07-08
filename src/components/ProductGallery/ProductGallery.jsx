@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Keyboard } from "swiper/modules";
 import "swiper/css";
@@ -44,23 +45,28 @@ const ProductGallery = ({ gallery, video, videoLabel, onSlideChange }) => {
         )}
       </Swiper>
 
-      <button
+      <motion.button
         type="button"
         aria-label="Previous image"
         onClick={() => swiperRef.current?.slidePrev()}
+        whileHover={{ scale: 1.08 }}
+        whileTap={{ scale: 0.95 }}
+        transition={{ duration: 0.15 }}
         className="absolute left-3 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-lg text-charcoal shadow-sm transition-colors duration-200 hover:bg-white focus:outline-hidden focus-visible:ring-2 focus-visible:ring-accent"
       >
         ‹
-      </button>
-      <button
+      </motion.button>
+      <motion.button
         type="button"
         aria-label="Next image"
-        onClick={() => swiperRef.current?.slideNext()  
-}
+        onClick={() => swiperRef.current?.slideNext()}
+        whileHover={{ scale: 1.08 }}
+        whileTap={{ scale: 0.95 }}
+        transition={{ duration: 0.15 }}
         className="absolute right-3 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-lg text-charcoal shadow-sm transition-colors duration-200 hover:bg-white focus:outline-hidden focus-visible:ring-2 focus-visible:ring-accent"
       >
         ›
-      </button>
+      </motion.button>
     </div>
   );
 };

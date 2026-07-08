@@ -1,5 +1,8 @@
+import { motion } from "framer-motion";
 import StatCard from "../ui/StatCard";
 import ServiceCard from "../ui/ServiceCard";
+import { fadeUpVariants, sectionViewport } from "../../lib/motionVariants";
+
 
 const STATS = [
   { value: "10+", label: "Years of Experience" },
@@ -29,6 +32,15 @@ const SERVICES = [
 
 const About = () => {
   return (
+
+    <motion.section
+      id="about"
+      className="py-section"
+      initial="hidden"
+      whileInView="visible"
+      viewport={sectionViewport}
+      variants={fadeUpVariants}
+    >
     <section id="about" className="py-section">
       <div className="container-custom">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
@@ -74,6 +86,7 @@ const About = () => {
         </div>
       </div>
     </section>
+    </motion.section>
   );
 };
 

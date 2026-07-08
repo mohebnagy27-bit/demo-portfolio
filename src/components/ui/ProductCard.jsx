@@ -1,3 +1,6 @@
+import { motion } from "framer-motion";
+import { cardHoverVariants, imageHoverVariants } from "../../lib/motionVariants";
+
 const ProductCard = ({ title, category, coverImage, shortDescription, onSelect }) => {
   const handleKeyDown = (event) => {
     if (event.key === "Enter" || event.key === " ") {
@@ -7,18 +10,23 @@ const ProductCard = ({ title, category, coverImage, shortDescription, onSelect }
   };
 
   return (
-    <div
+    <motion.div
       role="button"
       tabIndex={0}
       onClick={onSelect}
       onKeyDown={handleKeyDown}
-      className="group cursor-pointer overflow-hidden rounded-2xl border border-graylight bg-white transition-all duration-200 hover:border-graymid hover:shadow-md"
+      initial="rest"
+      whileHover="hover"
+      whileTap="hover"
+      variants={cardHoverVariants}
+      className="group cursor-pointer overflow-hidden rounded-2xl border border-graylight bg-white transition-shadow duration-200 hover:border-graymid hover:shadow-md"
     >
       <div className="aspect-4/3 overflow-hidden bg-offwhite">
-        <img
+        <motion.img
+          variants={imageHoverVariants}
           src={coverImage}
           alt={title}
-          className="h-full w-full object-cover transition-transform duration-200 group-hover:scale-105"
+          className="h-full w-full object-cover"
         />
       </div>
       <div className="p-6">
@@ -28,7 +36,7 @@ const ProductCard = ({ title, category, coverImage, shortDescription, onSelect }
         </h3>
         <p className="text-small mt-2 line-clamp-3">{shortDescription}</p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,13 +1,22 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 import products from "../../data/products";
 import ProductCard from "../ui/ProductCard";
 import ProductModal from "../ProductModal/ProductModal";
+import { fadeUpVariants, sectionViewport } from "../../lib/motionVariants";
 
 const Products = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
 
   return (
-    <section id="products" className="py-section bg-offwhite">
+    <motion.section
+      id="products"
+      className="py-section bg-offwhite"
+      initial="hidden"
+      whileInView="visible"
+      viewport={sectionViewport}
+      variants={fadeUpVariants}
+    >
       <div className="container-custom">
         <span className="text-subheading">Products</span>
         <h2 className="heading-section mt-4 max-w-2xl">
@@ -37,8 +46,8 @@ const Products = () => {
       </div>
 
       <ProductModal product={selectedProduct} onClose={() => setSelectedProduct(null)} />
-    </section>
+    </motion.section>
   );
 };
 
-export default Products; 
+export default Products;

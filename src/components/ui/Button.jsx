@@ -1,10 +1,18 @@
+import { motion } from "framer-motion";
+
 const Button = ({ children, variant = "primary", className = "", ...props }) => {
   const baseClass = variant === "secondary" ? "btn-secondary" : "btn-primary";
 
   return (
-    <button className={`${baseClass} ${className}`} {...props}>
+    <motion.button
+      whileHover={{ scale: 1.02 }}
+      whileTap={{ scale: 0.97 }}
+      transition={{ duration: 0.15, ease: "easeOut" }}
+      className={`${baseClass} ${className}`}
+      {...props}
+    >
       {children}
-    </button>
+    </motion.button>
   );
 };
 
