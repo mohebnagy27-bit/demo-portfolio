@@ -26,7 +26,7 @@ const ProductCard = ({ title, category, coverImage, shortDescription, onSelect }
           variants={imageHoverVariants}
           src={coverImage}
           alt={title}
-          className="h-full w-full object-cover"
+          className="h-full w-full object-contain"
         />
       </div>
       <div className="p-6">

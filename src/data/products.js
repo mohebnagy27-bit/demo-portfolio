@@ -1,12 +1,12 @@
 
-import coverproduct1 from "../assets/product1/1783545922015.jpg"
-import image1product1 from "../assets/product1/1783545921991.jpg"
+import coverproduct1 from "../assets/product1/1783545921991.jpg"
+import image1product1 from "../assets/product1/1783545922015.jpg"
 import image2product1 from "../assets/product1/1783545921939.jpg"
 
 import coverproduct2 from "../assets/product2/1783545921798.jpg"
-import image1product2 from "../assets/product2/1783545921823.jpg"
+import image1product2 from "../assets/product2/1783545921921.jpg"
 
-import coverproduct3 from "../assets/product3/1783545921921.jpg"
+import coverproduct3 from "../assets/product3/1783545921823.jpg"
 import image1product3 from "../assets/product3/1783545921884.jpg"
 
 const products = [
@@ -74,7 +74,7 @@ video: null
 
   shortDescription: "",
 
-  coverImage: coverproduct1,
+  coverImage: coverproduct3,
 
   gallery: [
     {

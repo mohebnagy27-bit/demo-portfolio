@@ -27,7 +27,7 @@ const ProductGallery = ({ gallery, video, videoLabel, onSlideChange }) => {
             <img
               src={item.image}
               alt={item.caption || `Product image ${index + 1}`}
-              className="h-full w-full object-cover"
+              className="h-full w-full object-contain"
             />
           </SwiperSlide>
         ))}
