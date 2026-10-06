@@ -20,7 +20,7 @@ const Hero = () => {
           <motion.h1 variants={heroItemVariants} className="heading-display mt-6">
             Premium Products,
             <br />
-            Presented Beautifully
+            Presented with Purpose.
           </motion.h1>
 
           <motion.p variants={heroItemVariants} className="text-body mt-6 max-w-md">
